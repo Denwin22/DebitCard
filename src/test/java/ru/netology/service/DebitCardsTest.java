@@ -140,7 +140,7 @@ public class DebitCardsTest {
     @Test
     void shouldNegativeResultPhoneNumberTest6() {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Петров Иван");
-        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("22");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("button")).click();
         var actualText = driver.findElement(By.cssSelector("[data-test-id=phone].input_invalid .input__sub")).getText().trim();
